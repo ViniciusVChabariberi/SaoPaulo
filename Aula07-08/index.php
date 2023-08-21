@@ -38,18 +38,18 @@
         </div>
         <div class="row bg-white">
             <div class="col text-start">
-                <form name="cadastro" method="POST" action="">
+                <form name="cadastro" method="POST" action="resposta.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-                        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Digite o seu nome completo">
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o seu nome completo">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
-                        <input type="telefone" class="form-control" id="exampleFormControlInput1" placeholder="(XX) 00000-0000">
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(XX) 00000-0000">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Origem:</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" name="origem" id="origem" aria-label="Default select example">
                             <option selected>Celular</option>
                             <option value="Fixo">Fixo</option>
                             <option value="Whatsapp">Whatsapp</option>
@@ -60,11 +60,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Data do Contato:</label>
-                        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Digite o seu nome completo">
+                        <input type="data" class="form-control" name="data" id="data" placeholder="Digite a data do contato">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Observação:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="txtObs" id="txtObs" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <button type="button" class="btn btn-primary">Cadastrar</button>
