@@ -38,7 +38,7 @@
         </div>
         <div class="row bg-white">
             <div class="col text-start">
-                <form name="cadastro" method="POST" action="resposta.php">
+                <form name="cadastro" method="POST" action="cadastrar.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nome:</label>
                         <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o seu nome completo">
@@ -60,14 +60,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Data do Contato:</label>
-                        <input type="data" class="form-control" name="data" id="data" placeholder="Digite a data do contato">
+                        <input type="Data" class="form-control" name="data" id="data" placeholder="Digite a data do contato">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Observação:</label>
-                        <textarea class="form-control" name="txtObs" id="txtObs" rows="3"></textarea>
+                        <textarea class="form-control" name="observacao" id="observacao" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <button type="button" class="btn btn-primary">Cadastrar</button>
+                        <input  class="botao" type="submit" name="Cadastrar" value="Cadastrar">
                     </div>
                 </form>
             </div>

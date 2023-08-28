@@ -1,9 +1,9 @@
 <?php
 
-define('SERVIDOR' , 'localhost');
+define('SERVIDOR' , 'localhost:3306');
 define('USUARIO' , 'root');
 define('SENHA' , '');
-define('BANCO' , 'projetoweb');
+define('BANCO' , 'clientes');
 
 
 class Conexao{
@@ -11,11 +11,7 @@ class Conexao{
     protected $mysqli;
 
     public function __construct(){
-        try{
         $this ->conexaoMysql();
-        } catch (Exception $e){
-            echo "Banco não foi encontrado!";
-        }
     }
 
     public function conexaoMysql(){
@@ -23,9 +19,14 @@ class Conexao{
     }
 
     public function setAgendamentos($nome, $telefone, $origem, $data_contato, $observacao){
-        $stmt = $this->mysqli->prepare("INSERT INTO agendamentos('nome' , 'telefone' , 'origem' , 'data_contato' , 'observacao') VALUES(?,?,?,?,?)");
+        $stmt = $this->mysqli->prepare("INSERT INTO clientes('Nome' , 'Telefone' , 'Origem' , 'DataContato' , 'Observacao') VALUES(?,?,?,?,?)");
         $stmt->bind_param("sssss", $nome, $telefone, $origem, $data_contato, $observacao);
-        $stmt->execute();
+        if($stmt->execute() == TRUE){
+            return true;
+        } else {
+            return false;
+        };
     }
 }
+
 ?>

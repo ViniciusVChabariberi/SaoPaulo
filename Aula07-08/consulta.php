@@ -1,3 +1,11 @@
+<?php
+define('SERVIDOR' , 'localhost:3306');
+define('USUARIO' , 'root');
+define('SENHA' , '');
+define('BANCO' , 'Clientes');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
